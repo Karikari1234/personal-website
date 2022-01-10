@@ -1,0 +1,98 @@
+//Main Colors
+$pink: #ff2bac;
+$semi-transparent-pink: #ff2bae4c;
+$purplePink: #702327;
+$cyan: #47dbe2;
+$black: #121212;
+$deepGrey: #1f1f1f;
+$grey: #303030;
+$white: #fff;
+$lightGrey: #828282;
+$transparent: rgba(255,255,255,0.0);
+$semi-transparent: rgba(255,255,255,0.1);
+$semi-transparent-green: 	#00800012;
+$green: #008000;
+
+//GridBox Colors
+$lightRed: #d82f4e;
+$navyBlue: #212f59;
+$purple: #57385c;
+$greenishGrey: #32313f;
+$redOrange: #c44d58;
+$orange: #f06f4f;
+
+
+
+
+//Sizes and px
+$small-border-radius: 2px;
+$small-padding: 15px;
+$thin-border-width: 1px;
+$small-space: 10px;
+$small-heading-size: 1.2rem;
+
+//mixins
+@mixin mobile {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin flex($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+}
+
+@mixin marginBottom {
+  margin-bottom: 1rem;
+}
+
+
+@mixin squareImgDiv {
+  width: 100%;
+  padding-top: 50%;
+  position: relative;
+  top:0;
+  //padding-top: 100%;
+}
+
+
+
+
+@mixin small_heading {
+  color: $white;
+  font-size: $small-heading-size;
+  font-weight: bold;
+}
+
+
+@mixin input_text {
+  width: 100%;
+  border: 1px solid $lightGrey;
+  border-radius: $small-border-radius;
+}
+
+@mixin input_submit {
+  width: 100%;
+  border: none;
+  background-color: $semi-transparent-pink;
+  color:$pink;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: $small-border-radius;
+}
+
+
+@mixin  form {
+  width: 100%;
+
+  & > * {
+    margin: 5px 0;
+  }
+}
